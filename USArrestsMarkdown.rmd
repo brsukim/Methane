@@ -1,6 +1,6 @@
 ---
 title: Principal Component Analysis of USArrests Dataset
-author: Brandon Kim
+author: BK
 date: July 6, 2023
 output: html_document
 ---
