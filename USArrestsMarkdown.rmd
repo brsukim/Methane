@@ -6,7 +6,8 @@ output: html_document
 ---
 
 ```{r setup, include= FALSE}
-# hi corina
+
+# hi corina and brandon
 # Set some options and load the tidyverse package
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
