@@ -6,9 +6,10 @@ output: html_document
 ---
 
 ```{r setup, include= FALSE}
+
+# Set some options and load the tidyverse package
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
-
 
 ```
 
