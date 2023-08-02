@@ -1,0 +1,113 @@
+---
+title: Initial Principal Component Analysis of Methane Data
+author: Brandon Kim
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: html_document
+---
+
+```{r setup, include= FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+
+```
+
+## What is the Methane dataset?
+
+A dataset of  70+ existing research papers that contain available soil methane (CH4) flux data
+
+```{r dataset, echo=FALSE}
+
+#load data
+system("initial_data_readin.R")
+MethaneData <- read.csv("final_data.csv")
+MethaneData <- MethaneData[complete.cases(MethaneData$SM_value), ]
+
+
+#view first six rows of data
+head(MethaneData)
+```
+
+The four factors of: Murder, Assault, Urban Population, and Rape will be assessed in this PCA.
+
+### PRComp
+
+We use the function `prcomp()` to calculate the principal components of the dataset. The function works by centering and scaling the each variable to a normal distribution (mean = 0, sd = 1). A covariance matrix is created with all of the variables (race, murders, etc.), showing how variables are related to one another (strength and direction).
+
+Then R does some stuff with eigenvalues that I still can't really wrap my head around. Eigenvalues are a measure of how much a vector is stretched in a transformation and I guess we are able to calculate that in a PCA from the covariance matrix. These form the principal components, with amount of variance being put in ascending order.
+
+```{r prcomp}
+
+#calculate principal components
+results <- prcomp(MethaneData, scale = TRUE)
+```
+
+Specifying that `scale = TRUE` is critical as it ensures that the variables are correctly scaled on a normal distribution
+
+```{r display_eigenvalues}
+#reverse the signs
+results$rotation <- -1*results$rotation
+
+#display principal components
+results$rotation
+```
+
+The above code first flips the values of the eigenvalues with `-1*results$rotation` so that the principal components can be better interpreted.
+
+The output, known as a eigenvalue matrix, shows the correlation between the original variables and the Principal Components. We see that PC1 has high values for Murder, Assault, and Rape, indicating that PC1 describes the most variation in these variables.
+
+Conversely, PC2 has by far the highest correlation in UrbanPop, meaning that PC2 places heavy emphasis on Urban Population.
+
+```{r show_scores, echo= FALSE}
+#reverse the signs of the scores
+results$x <- -1*results$x
+
+#display the first six scores
+head(results$x)
+```
+
+## Biplot of PC1 and PC2
+
+After reversing the eigenvalues back to their original value, `results$x` gives the principal component score for each observation for every principal component. To better see this, we can create a biplot that visualizes PC1 and PC2 and where all the states fit spatially on this PC plot.
+
+```{r biplot, echo= FALSE}
+#create biplot to visualize results
+biplot(results, scale = 0) 
+```
+
+We see that states that are close to each other will have similar data patterns with one another. For instance, Vermont and West Virginia have similar data patterns while also being in very close proximity:
+
+```         
+Vermont           2.2      48       32 11.2   
+West Virginia     5.7      81       39  9.3
+```
+
+Furthermore, the proximity of an observed point's (a state's) a variable vector is proportional to their association. For instance, Georgia appears to be closest to the Murder vector and if we take a look at the states with the highest murder rates in the original dataset, we can see that Georgia is actually at the top of the list:
+
+## Scree Plot
+
+We finish this by creating a scree plot, which is a graphic that visualizes the amount of variation that each principal component is responsible for. By doing so, we can see which principal components contribute the most to the results of the dataset.
+
+```{r screeplot, echo= FALSE}
+#calculate total variance explained by each principal component
+var_explained = results$sdev^2 / sum(results$sdev^2)
+
+# Create a scree plot
+plot(c(1:9), var_explained, type = "b",
+     xlab = "Principal Component",
+     ylab = "Variance Explained",
+     main = "Scree Plot",
+     ylim = c(0, 1))
+```
+
+## Summary of PC
+
+By doing a summary of the `prcomp` of MethaneData, we can see that PC1 accounts of around 62% of variation while PC2 captures around 25%. This indicates that the first two principal components capture the majority of the variability in the dataset. Given what we know about how PC1 is explained by murder, assault, and rape and PC2 by UrbanPop, we can create empirical assumptions about the data and its variability.  
+```{r summary}
+summary(results)
+```
+Because our summary shows that about 87% of the data's variance can be explained by the first two principal components, we are safe to assume that the biplot of just PC1 and PC2 are valid representations of the data. 
+
+## References
+
+Zach. (2020, December 1). Principal components analysis in R: Step-by-step example. Statology. <https://www.statology.org/principal-components-analysis-in-r/>
