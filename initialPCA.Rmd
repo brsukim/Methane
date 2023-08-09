@@ -14,7 +14,7 @@ library(tidyverse)
 
 ## What is the Methane dataset?
 
-A dataset of  70+ existing research papers that contain available soil methane (CH4) flux data
+A dataset of 70+ existing research papers that contain available soil methane (CH4) flux data
 
 ```{r dataset, echo=FALSE}
 
@@ -102,11 +102,13 @@ plot(c(1:9), var_explained, type = "b",
 
 ## Summary of PC
 
-By doing a summary of the `prcomp` of MethaneData, we can see that PC1 accounts of around 62% of variation while PC2 captures around 25%. This indicates that the first two principal components capture the majority of the variability in the dataset. Given what we know about how PC1 is explained by murder, assault, and rape and PC2 by UrbanPop, we can create empirical assumptions about the data and its variability.  
+By doing a summary of the `prcomp` of MethaneData, we can see that PC1 accounts of around 62% of variation while PC2 captures around 25%. This indicates that the first two principal components capture the majority of the variability in the dataset. Given what we know about how PC1 is explained by murder, assault, and rape and PC2 by UrbanPop, we can create empirical assumptions about the data and its variability.
+
 ```{r summary}
 summary(results)
 ```
-Because our summary shows that about 87% of the data's variance can be explained by the first two principal components, we are safe to assume that the biplot of just PC1 and PC2 are valid representations of the data. 
+
+Because our summary shows that about 87% of the data's variance can be explained by the first two principal components, we are safe to assume that the biplot of just PC1 and PC2 are valid representations of the data.
 
 ## References
 
