@@ -1,260 +1,247 @@
 "Study_number","Ecosystem_type","Latitude","Elevation","SM_value","period","stnd_flux","Ecosystem_numeric"
-23001,"Forest",39.92,30,0.13,"growing season",-0.03967,1
-23001,"Forest",39.92,23,0.4,"growing season",-0.0026,1
-23002,"Forest",10.431,115,NA,"annual",-2.938405795e-05,1
-23004,"Agriculture",33.9,NA,0.423,"annual",-0.00022,2
-23004,"Agriculture",33.9,NA,0.354,"annual",-0.00034,2
-23004,"Agriculture",33.9,NA,0.494,"annual",-0.00019,2
-23004,"Agriculture",33.9,NA,0.264,"annual",-0.00133,2
-23004,"Agriculture",33.9,NA,0.235,"annual",-0.00155,2
-23004,"Agriculture",33.9,NA,0.283,"annual",-0.00134,2
-23004,"Agriculture",33.9,NA,0.472,"annual",-0.00141,2
-23004,"Agriculture",33.9,NA,0.466,"annual",-9e-05,2
-23004,"Agriculture",33.9,NA,0.451,"annual",-0.00029,2
-23004,"Agriculture",33.9,NA,0.267,"annual",-0.00146,2
-23005,"Forest",48.5,540,NA,"annual",-0.0188,1
-23005,"Forest",48.5,540,NA,"annual",-0.0314,1
-23005,"Forest",48.5,540,NA,"annual",-0.0221,1
-23005,"Forest",48.5,540,NA,"annual",-0.0384,1
-23005,"Forest",48.5,540,NA,"annual",-0.0112,1
-23005,"Forest",48.5,540,NA,"annual",-0.0266,1
-23005,"Forest",48.5,540,NA,"annual",-0.0206,1
-23005,"Forest",48.5,540,NA,"annual",-0.0211,1
-23005,"Forest",48.5,540,NA,"annual",-0.0826,1
-23005,"Forest",48.5,540,NA,"annual",-0.0814,1
-23005,"Forest",48.5,540,NA,"annual",-0.0767,1
-23005,"Forest",48.5,540,NA,"annual",-0.0602,1
-23006,"Forest",-17.27,80,0.3,"monthly",-0.0238,1
-23007,"Savanna",-4.289,82,0.428,"monthly",7e-04,3
-23007,"Savanna",-4.289,82,0.51,"monthly",-4e-04,3
-23010,"Forest",36.0201,NA,0.29,"annual",0.184,1
-23010,"Forest",36.0201,NA,0.26,"annual",0.196,1
-23010,"Forest",36.0201,NA,0.23,"annual",0.197,1
-23011,"Pasture",8.851,14,NA,"annual",-0.2554347826,4
-23011,"Pasture",8.851,14,NA,"annual",0.339673913,4
-23011,"Pasture",8.851,14,NA,"annual",-1.092391304,4
-23013,"Forest",-43.094,NA,0.31,"annual",-0.0219846179,1
-23013,"Forest",-43.094,NA,0.29,"annual",-0.09396220348,1
-23013,"Forest",-43.094,NA,0.35,"annual",-0.09485708161,1
-23013,"Forest",-43.094,NA,0.37,"annual",-0.05425365608,1
-23013,"Forest",-43.094,NA,0.5,"annual",-0.02186441039,1
-23016,"Forest",50.208,1350,NA,"monthly",-0.01469202897,1
-23016,"Forest",50.208,1350,NA,"monthly",-0.01522628457,1
-23016,"Forest",50.208,1350,NA,"monthly",-0.01976745716,1
-23017,"Wetland",64.183,270,NA,"annual",0.0195,5
-23017,"Wetland",64.183,270,NA,"annual",0.0179,5
-23017,"Wetland",64.183,270,NA,"annual",0.014,5
-23017,"Wetland",64.183,270,NA,"annual",0.011,5
-23017,"Wetland",64.183,270,NA,"annual",0.0189,5
-23017,"Wetland",64.183,270,NA,"annual",0.017,5
-23017,"Wetland",64.183,270,NA,"annual",0.0204,5
-23017,"Wetland",64.183,270,NA,"annual",0.0219,5
-23017,"Wetland",64.183,270,NA,"annual",0.0115,5
-23017,"Wetland",64.183,270,NA,"annual",0.0126,5
-23017,"Wetland",64.183,270,NA,"annual",0.0109,5
-23017,"Wetland",64.183,270,NA,"annual",0.0205,5
-23017,"Wetland",64.183,270,NA,"annual",0.0274,5
-23017,"Wetland",64.183,270,NA,"annual",0.0173,5
-23017,"Wetland",64.183,270,NA,"annual",0.0187,5
-23017,"Wetland",64.183,270,NA,"annual",0.0137,5
-23017,"Wetland",64.183,270,NA,"annual",0.0219,5
-23024,"Forest",46.55,2271,0.48,"growing season",-0.1141971343,1
-23024,"Forest",46.55,2271,0.12,"growing season",0.02620523713,1
-23025,"Agriculture",58.33,NA,0.89,"annual",0.049,2
-23025,"Agriculture",58.33,NA,0.74,"annual",0.002,2
-23025,"Agriculture",58.33,NA,0.61,"annual",-0.006,2
-23025,"Agriculture",58.33,NA,0.61,"annual",0.012,2
-23025,"Agriculture",58.33,NA,0.49,"annual",-0.005,2
-23025,"Agriculture",58.33,NA,0.36,"annual",-0.008,2
-23027,"Agriculture",41.23,1313,0.46,"annual",0.01068511198,2
-23027,"Agriculture",41.23,1313,0.55,"annual",0.01001729248,2
-23027,"Agriculture",41.23,1313,0.38,"annual",0.01095223978,2
-23027,"Agriculture",41.23,1313,0.59,"annual",0.009883728582,2
-23027,"Agriculture",41.23,1313,0.52,"annual",0.01322282608,2
-23027,"Agriculture",41.23,1313,0.61,"annual",0.01081867588,2
-23030,"Agriculture",46.38369,NA,0.2,"growing season",0.001981081081,2
-23031,"Forest",-17.267,80,NA,"annual",0.0408,1
-23031,"Forest",-17.267,80,NA,"annual",0.0469,1
-23031,"Forest",-17.267,80,NA,"annual",0.0285,1
-23031,"Forest",-17.267,80,NA,"annual",0.0312,1
-23031,"Forest",-17.267,80,NA,"annual",0.0427,1
-23031,"Forest",-17.267,80,NA,"annual",0.0365,1
-23031,"Forest",-17.267,80,NA,"annual",0.0307,1
-23031,"Forest",-17.267,80,NA,"annual",0.031,1
-23031,"Forest",-17.267,80,NA,"annual",0.0388,1
-23031,"Forest",-17.267,80,NA,"annual",0.0366,1
-23035,"Agriculture",44.591,600,NA,"annual",0.002938405795,2
-23037,"Agriculture",20.45016,NA,0.4,"growing season",0.0738,2
-23041,"Wetland",47.505,NA,NA,"annual",0.0157,5
-23041,"Wetland",47.505,NA,NA,"annual",0.0163,5
-23041,"Wetland",47.505,NA,NA,"annual",0.0332,5
-23042,"Agriculture",18.812,NA,1,"growing season",0.0155,2
-23042,"Agriculture",18.812,NA,1,"growing season",0.0168,2
-23043,"Wetland",68.346,410,0.34,"annual",-0.00092,5
-23046,"Agriculture",3.176,7,NA,"growing season",9e-05,2
-23046,"Agriculture",3.176,7,NA,"growing season",9e-05,2
-23046,"Agriculture",3.176,7,NA,"growing season",9e-05,2
-23047,"Agriculture",30.6,NA,90,"growing season",0.0006857142857,2
-23047,"Agriculture",30.6,NA,90,"growing season",0.00108,2
-23047,"Agriculture",30.6,NA,90,"growing season",0.0006857142857,2
-23047,"Agriculture",30.6,NA,90,"growing season",0.00108,2
-23047,"Agriculture",30.6,NA,90,"growing season",0.0006857142857,2
-23047,"Agriculture",30.6,NA,90,"growing season",0.00108,2
-23047,"Agriculture",30.6,NA,90,"growing season",0.0006857142857,2
-23047,"Agriculture",30.6,NA,90,"growing season",0.00108,2
-23047,"Agriculture",30.6,NA,90,"growing season",0.0006857142857,2
-23047,"Agriculture",30.6,NA,90,"growing season",0.00108,2
-23047,"Agriculture",30.6,NA,90,"growing season",0.0006857142857,2
-23047,"Agriculture",30.6,NA,90,"growing season",0.00108,2
-23048,"Agriculture",-26.75,60,0.512,"annual",-0.01495915677,2
-23048,"Agriculture",-26.75,60,0.478,"annual",-0.01402420947,2
-23051,"Forest",35,222,0.61,"annual",-0.1896607377,1
-23051,"Forest",35,222,0.31,"annual",-1.101902173,1
-23052,"Wetland",55.933,NA,0.55,"annual",-1e-05,5
-23052,"Wetland",55.933,NA,0.55,"annual",-2e-05,5
-23052,"Wetland",55.933,NA,0.55,"annual",-2e-05,5
-23052,"Wetland",57.217,NA,0.66,"annual",-3e-05,5
-23052,"Wetland",57.217,NA,0.66,"annual",-1e-05,5
-23052,"Wetland",57.217,NA,0.66,"annual",0.00074,5
+23001,"Forest",39.92,30,0.13,"growing season",-0.95208,1
+23001,"Forest",39.92,23,0.4,"growing season",-0.0624,1
+23002,"Forest",10.431,115,NA,"annual",-0.0007052173908,1
+23004,"Agriculture",33.9,NA,0.423,"annual",-0.00528,2
+23004,"Agriculture",33.9,NA,0.354,"annual",-0.00816,2
+23004,"Agriculture",33.9,NA,0.494,"annual",-0.00456,2
+23004,"Agriculture",33.9,NA,0.264,"annual",-0.03192,2
+23004,"Agriculture",33.9,NA,0.235,"annual",-0.0372,2
+23004,"Agriculture",33.9,NA,0.283,"annual",-0.03216,2
+23004,"Agriculture",33.9,NA,0.472,"annual",-0.03384,2
+23004,"Agriculture",33.9,NA,0.466,"annual",-0.00216,2
+23004,"Agriculture",33.9,NA,0.451,"annual",-0.00696,2
+23004,"Agriculture",33.9,NA,0.267,"annual",-0.03504,2
+23005,"Forest",48.5,540,NA,"annual",-0.4512,1
+23005,"Forest",48.5,540,NA,"annual",-0.7536,1
+23005,"Forest",48.5,540,NA,"annual",-0.5304,1
+23005,"Forest",48.5,540,NA,"annual",-0.9216,1
+23005,"Forest",48.5,540,NA,"annual",-0.2688,1
+23005,"Forest",48.5,540,NA,"annual",-0.6384,1
+23005,"Forest",48.5,540,NA,"annual",-0.4944,1
+23005,"Forest",48.5,540,NA,"annual",-0.5064,1
+23005,"Forest",48.5,540,NA,"annual",-1.9824,1
+23005,"Forest",48.5,540,NA,"annual",-1.9536,1
+23005,"Forest",48.5,540,NA,"annual",-1.8408,1
+23005,"Forest",48.5,540,NA,"annual",-1.4448,1
+23006,"Forest",-17.27,80,0.3,"monthly",-0.5712,1
+23007,"Savanna",-4.289,82,0.428,"monthly",0.0168,3
+23007,"Savanna",-4.289,82,0.51,"monthly",-0.0096,3
+23010,"Forest",36.0201,NA,0.29,"annual",4.416,1
+23010,"Forest",36.0201,NA,0.26,"annual",4.704,1
+23010,"Forest",36.0201,NA,0.23,"annual",4.728,1
+23011,"Pasture",8.851,14,NA,"annual",-6.1304347824,4
+23011,"Pasture",8.851,14,NA,"annual",8.152173912,4
+23011,"Pasture",8.851,14,NA,"annual",-26.217391296,4
+23013,"Forest",-43.094,NA,0.31,"annual",-0.5276308296,1
+23013,"Forest",-43.094,NA,0.29,"annual",-2.25509288352,1
+23013,"Forest",-43.094,NA,0.35,"annual",-2.27656995864,1
+23013,"Forest",-43.094,NA,0.37,"annual",-1.30208774592,1
+23013,"Forest",-43.094,NA,0.5,"annual",-0.52474584936,1
+23016,"Forest",50.208,1350,NA,"monthly",-0.35260869528,1
+23016,"Forest",50.208,1350,NA,"monthly",-0.36543082968,1
+23016,"Forest",50.208,1350,NA,"monthly",-0.47441897184,1
+23017,"Wetland",64.183,270,NA,"annual",0.468,5
+23017,"Wetland",64.183,270,NA,"annual",0.4296,5
+23017,"Wetland",64.183,270,NA,"annual",0.336,5
+23017,"Wetland",64.183,270,NA,"annual",0.264,5
+23017,"Wetland",64.183,270,NA,"annual",0.4536,5
+23017,"Wetland",64.183,270,NA,"annual",0.408,5
+23017,"Wetland",64.183,270,NA,"annual",0.4896,5
+23017,"Wetland",64.183,270,NA,"annual",0.5256,5
+23017,"Wetland",64.183,270,NA,"annual",0.276,5
+23017,"Wetland",64.183,270,NA,"annual",0.3024,5
+23017,"Wetland",64.183,270,NA,"annual",0.2616,5
+23017,"Wetland",64.183,270,NA,"annual",0.492,5
+23017,"Wetland",64.183,270,NA,"annual",0.6576,5
+23017,"Wetland",64.183,270,NA,"annual",0.4152,5
+23017,"Wetland",64.183,270,NA,"annual",0.4488,5
+23017,"Wetland",64.183,270,NA,"annual",0.3288,5
+23017,"Wetland",64.183,270,NA,"annual",0.5256,5
+23024,"Forest",46.55,2271,0.48,"growing season",-2.7407312232,1
+23024,"Forest",46.55,2271,0.12,"growing season",0.62892569112,1
+23025,"Agriculture",58.33,NA,0.89,"annual",1.176,2
+23025,"Agriculture",58.33,NA,0.74,"annual",0.048,2
+23025,"Agriculture",58.33,NA,0.61,"annual",-0.144,2
+23025,"Agriculture",58.33,NA,0.61,"annual",0.288,2
+23025,"Agriculture",58.33,NA,0.49,"annual",-0.12,2
+23025,"Agriculture",58.33,NA,0.36,"annual",-0.192,2
+23027,"Agriculture",41.23,1313,0.46,"annual",0.25644268752,2
+23027,"Agriculture",41.23,1313,0.55,"annual",0.24041501952,2
+23027,"Agriculture",41.23,1313,0.38,"annual",0.26285375472,2
+23027,"Agriculture",41.23,1313,0.59,"annual",0.237209485968,2
+23027,"Agriculture",41.23,1313,0.52,"annual",0.31734782592,2
+23027,"Agriculture",41.23,1313,0.61,"annual",0.25964822112,2
+23030,"Agriculture",46.38369,NA,0.2,"growing season",0.047545945944,2
+23031,"Forest",-17.267,80,NA,"annual",0.9792,1
+23031,"Forest",-17.267,80,NA,"annual",1.1256,1
+23031,"Forest",-17.267,80,NA,"annual",0.684,1
+23031,"Forest",-17.267,80,NA,"annual",0.7488,1
+23031,"Forest",-17.267,80,NA,"annual",1.0248,1
+23031,"Forest",-17.267,80,NA,"annual",0.876,1
+23031,"Forest",-17.267,80,NA,"annual",0.7368,1
+23031,"Forest",-17.267,80,NA,"annual",0.744,1
+23031,"Forest",-17.267,80,NA,"annual",0.9312,1
+23031,"Forest",-17.267,80,NA,"annual",0.8784,1
+23035,"Agriculture",44.591,600,NA,"annual",0.07052173908,2
+23037,"Agriculture",20.45016,NA,0.4,"growing season",1.7712,2
+23041,"Wetland",47.505,NA,NA,"annual",0.3768,5
+23041,"Wetland",47.505,NA,NA,"annual",0.3912,5
+23041,"Wetland",47.505,NA,NA,"annual",0.7968,5
+23042,"Agriculture",18.812,NA,1,"growing season",0.372,2
+23042,"Agriculture",18.812,NA,1,"growing season",0.4032,2
+23043,"Wetland",68.346,410,0.34,"annual",-0.3541632,5
+23046,"Agriculture",3.176,7,NA,"growing season",0.0040345509024,2
+23047,"Agriculture",30.6,NA,0.9,"growing season",0.0164571428568,2
+23047,"Agriculture",30.6,NA,0.9,"growing season",0.02592,2
+23048,"Agriculture",-26.75,60,0.512,"annual",-0.35901976248,2
+23048,"Agriculture",-26.75,60,0.478,"annual",-0.33658102728,2
+23051,"Forest",35,222,0.61,"annual",-4.5518577048,1
+23052,"Wetland",55.933,NA,0.55,"annual",-0.00024,5
+23052,"Wetland",55.933,NA,0.55,"annual",-0.00048,5
+23052,"Wetland",55.933,NA,0.55,"annual",-0.00048,5
+23052,"Wetland",57.217,NA,0.66,"annual",-0.00072,5
+23052,"Wetland",57.217,NA,0.66,"annual",-0.00024,5
+23052,"Wetland",57.217,NA,0.66,"annual",0.01776,5
 23052,"Wetland",56.367,NA,0.49,"annual",0,5
-23052,"Wetland",56.367,NA,0.49,"annual",0.00332,5
-23052,"Wetland",56.367,NA,0.49,"annual",5e-05,5
-23053,"Forest",-12.895,900,0.393,"growing season",0.0006811758888,1
-23053,"Forest",-13.049,1700,0.372,"growing season",-0.0006544631088,1
-23053,"Forest",-13.19,2700,0.377,"growing season",-0.0007212450587,1
-23053,"Grassland",-13.122,3450,0.716,"growing season",0.02480281619,6
-23053,"Forest",-12.895,900,0.429,"growing season",-0.0004274044792,1
-23053,"Forest",-13.049,1700,0.318,"growing season",-0.001121936758,1
-23053,"Forest",-13.19,2700,0.227,"growing season",-0.001629479577,1
-23053,"Grassland",-13.122,3450,0.712,"growing season",0.001295569828,6
-23055,"Wetland",54.739,NA,NA,"annual",0.00202,5
-23055,"Wetland",54.739,NA,1,"annual",0.00316,5
-23055,"Wetland",54.739,NA,NA,"annual",0.00471,5
-23055,"Wetland",54.739,NA,NA,"annual",1e-05,5
-23057,"Forest",-2.983,NA,NA,"annual",-0.0021,1
-23057,"Forest",-2.983,NA,NA,"annual",-0.001,1
-23057,"Pasture",-2.983,NA,NA,"annual",-0.0013,4
-23057,"Pasture",-2.983,NA,NA,"annual",-0.0031,4
-23059,"Agriculture",39,NA,1,"growing season",0.071688,2
-23059,"Agriculture",39,NA,1,"growing season",0.01776,2
-23060,"Forest",39.7,NA,0.33,"annual",-0.0001907592,1
-23060,"Forest",39.7,NA,0.3,"annual",0.0004044048,1
-23060,"Forest",39.7,NA,0.74,"annual",5.7744e-05,1
-23062,"Forest",33.467,NA,0.372,"monthly",-0.00023,1
-23062,"Forest",18.617,NA,0.525,"monthly",-1e-04,1
-23062,"Forest",33.467,NA,0.519,"monthly",-1e-04,1
-23062,"Forest",18.617,NA,0.436,"monthly",-2.5e-05,1
-23062,"Forest",33.467,NA,0.503,"monthly",-7e-05,1
-23062,"Forest",18.617,NA,0.341,"monthly",-2e-05,1
-23062,"Forest",33.467,NA,0.604,"monthly",-0.000205,1
-23062,"Forest",18.617,NA,0.419,"monthly",-9.5e-05,1
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1892,2
-23063,"Agriculture",14.163,21,NA,"annual",0.1929,2
-23063,"Agriculture",14.163,21,NA,"annual",0.378,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0435,2
-23063,"Agriculture",14.163,21,NA,"annual",0.0831,2
-23063,"Agriculture",14.163,21,NA,"annual",0.2427,2
-23064,"Forest",0.267,1600,0.2,"monthly",-0.07533003946,1
-23067,"Agriculture",19.75,NA,NA,"growing season",0.000893,2
+23052,"Wetland",56.367,NA,0.49,"annual",0.07968,5
+23052,"Wetland",56.367,NA,0.49,"annual",0.0012,5
+23053,"Forest",-12.895,900,0.393,"growing season",0.0163482213312,1
+23053,"Forest",-13.049,1700,0.372,"growing season",-0.0157071146112,1
+23053,"Forest",-13.19,2700,0.377,"growing season",-0.0173098814088,1
+23053,"Grassland",-13.122,3450,0.716,"growing season",0.59526758856,6
+23053,"Forest",-12.895,900,0.429,"growing season",-0.0102577075008,1
+23053,"Forest",-13.049,1700,0.318,"growing season",-0.026926482192,1
+23053,"Forest",-13.19,2700,0.227,"growing season",-0.039107509848,1
+23053,"Grassland",-13.122,3450,0.712,"growing season",0.031093675872,6
+23055,"Wetland",54.739,NA,NA,"annual",0.04848,5
+23055,"Wetland",54.739,NA,1,"annual",0.07584,5
+23055,"Wetland",54.739,NA,NA,"annual",0.11304,5
+23055,"Wetland",54.739,NA,NA,"annual",0.00024,5
+23057,"Forest",-2.983,NA,NA,"annual",-0.0504,1
+23057,"Forest",-2.983,NA,NA,"annual",-0.024,1
+23057,"Pasture",-2.983,NA,NA,"annual",-0.0312,4
+23057,"Pasture",-2.983,NA,NA,"annual",-0.0744,4
+23059,"Agriculture",39,NA,1,"growing season",1.720512,2
+23059,"Agriculture",39,NA,1,"growing season",0.42624,2
+23060,"Forest",39.7,NA,0.33,"annual",-0.0045782208,1
+23060,"Forest",39.7,NA,0.3,"annual",0.0097057152,1
+23060,"Forest",39.7,NA,0.74,"annual",0.001385856,1
+23062,"Forest",33.467,NA,0.372,"monthly",-0.00552,1
+23062,"Forest",18.617,NA,0.525,"monthly",-0.0024,1
+23062,"Forest",33.467,NA,0.519,"monthly",-0.0024,1
+23062,"Forest",18.617,NA,0.436,"monthly",-6e-04,1
+23062,"Forest",33.467,NA,0.503,"monthly",-0.00168,1
+23062,"Forest",18.617,NA,0.341,"monthly",-0.00048,1
+23062,"Forest",33.467,NA,0.604,"monthly",-0.00492,1
+23062,"Forest",18.617,NA,0.419,"monthly",-0.00228,1
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23063,"Agriculture",14.163,21,NA,"annual",4.5408,2
+23063,"Agriculture",14.163,21,NA,"annual",4.6296,2
+23063,"Agriculture",14.163,21,NA,"annual",9.072,2
+23063,"Agriculture",14.163,21,NA,"annual",1.044,2
+23063,"Agriculture",14.163,21,NA,"annual",1.9944,2
+23063,"Agriculture",14.163,21,NA,"annual",5.8248,2
+23064,"Forest",0.267,1600,0.2,"monthly",-1.80792094704,1
+23067,"Agriculture",19.75,NA,NA,"growing season",0.021432,2
