@@ -2,7 +2,7 @@
 title: Principal Component Analysis of USArrests Dataset
 author: Brandon Kim
 date: "`r format(Sys.time(), '%d %B %Y')`"
-output: html_document
+output: rmarkdown::github_document
 ---
 
 ```{r setup, include= FALSE}

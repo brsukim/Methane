@@ -2,7 +2,7 @@
 title: Initial Principal Component Analysis of Methane Data
 author: Brandon Kim
 date: "`r format(Sys.time(), '%d %B %Y')`"
-output: html_document
+output: rmarkdown::github_document
 ---
 
 ```{r setup, include= FALSE}
@@ -19,7 +19,7 @@ A dataset of 70+ existing research papers that contain available soil methane (C
 ```{r dataset, echo=FALSE}
 
 #load data
-system("initial_data_readin.R")
+system("DataDigester.R")
 MethaneData <- read.csv("final_data.csv")
 MethaneData <- MethaneData[complete.cases(MethaneData$SM_value), ]
 
@@ -28,7 +28,20 @@ MethaneData <- MethaneData[complete.cases(MethaneData$SM_value), ]
 head(MethaneData)
 ```
 
-The four factors of: Murder, Assault, Urban Population, and Rape will be assessed in this PCA.
+Latitude, Soil Moisture, Standardized CH4 Flux, Ecosystem type, and Measurement period will be assessed in this PCA.
+
+### Linear Regression
+
+Doing a simple linear regression of CH4 soil flux and soil moisture data, we can see a 2-variable comparison of the most obvious sources of variance. However, we know that there is a multitude of factors that contribute to soil methane flux. For this reason, we need a PCA to be able to understand which factors contribute to this variance and to what degree. 
+```{r linreg, tidy = true}
+model <- lm(stnd_flux ~ SM_value, data = MethaneData)
+summary(model)
+ggplot(MethaneData, aes(x = SM_value, y = stnd_flux)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(x = "SM Value", y = "Standardized Flux (mg CH4 / m2/ d)", title = "Linear Regression Plot")
+
+```
 
 ### PRComp
 
@@ -54,9 +67,7 @@ results$rotation
 
 The above code first flips the values of the eigenvalues with `-1*results$rotation` so that the principal components can be better interpreted.
 
-The output, known as a eigenvalue matrix, shows the correlation between the original variables and the Principal Components. We see that PC1 has high values for Murder, Assault, and Rape, indicating that PC1 describes the most variation in these variables.
-
-Conversely, PC2 has by far the highest correlation in UrbanPop, meaning that PC2 places heavy emphasis on Urban Population.
+The output, known as a eigenvalue matrix, shows the correlation between the original variables and the Principal Components. We see that P
 
 ```{r show_scores, echo= FALSE}
 #reverse the signs of the scores
@@ -75,13 +86,7 @@ After reversing the eigenvalues back to their original value, `results$x` gives 
 biplot(results, scale = 0) 
 ```
 
-We see that states that are close to each other will have similar data patterns with one another. For instance, Vermont and West Virginia have similar data patterns while also being in very close proximity:
-
-```         
-Vermont           2.2      48       32 11.2   
-West Virginia     5.7      81       39  9.3
-```
-
+We see that states that are close to each other will have similar data patterns with one another. 
 Furthermore, the proximity of an observed point's (a state's) a variable vector is proportional to their association. For instance, Georgia appears to be closest to the Murder vector and if we take a look at the states with the highest murder rates in the original dataset, we can see that Georgia is actually at the top of the list:
 
 ## Scree Plot
@@ -93,7 +98,7 @@ We finish this by creating a scree plot, which is a graphic that visualizes the 
 var_explained = results$sdev^2 / sum(results$sdev^2)
 
 # Create a scree plot
-plot(c(1:9), var_explained, type = "b",
+plot(c(1:3), var_explained, type = "b",
      xlab = "Principal Component",
      ylab = "Variance Explained",
      main = "Scree Plot",
