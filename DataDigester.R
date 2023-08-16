@@ -7,16 +7,20 @@ library(stringr)
 library(readr)
 library(udunits2)
 
-current_data <- read_csv("Methane/CH4_7.29.csv",
+current_data <- read_csv("CH4_8.15.csv",
                          trim_ws = TRUE,
                          #0       10        20        30
                          #123456789012345678901234567890123456                     
-                         col_types = "ccdddcdccccdddcccddddddccddddddccccc")
+                         show_col_types = FALSE)
 
 current_data %>%
   filter(is.na(`Discard?`)) %>%
   select(-`Discard?`) -> good_data
 
+# Removes all manipulated data which created variability that cannot be accounted for in the PCA
+good_data <- good_data[good_data$Manipulation_V2 == "None", ]
+
+# Unit Counts shows how many of each pre-converted unit there is
 good_data %>%
   group_by(CH4_flux_unit_V2) %>%
   mutate(count = length(Study_number)) %>%
@@ -24,16 +28,26 @@ good_data %>%
   unique(.) %>%
   arrange(desc(count)) -> unit_counts
 
+
+# Standardizing soil moisture data
+
+# Loop through each row
+for (i in 1:nrow(good_data)) {
+  # Check if the SM_unit is not missing and equals "VWC%"
+  if (!is.na(good_data$SM_unit[i]) && good_data$SM_unit[i] == "VWC%") {
+    # Set default values if PD or BD are missing
+    pd_value <- ifelse(is.na(good_data$PD[i]), 2.65, good_data$PD[i])
+    bd_value <- ifelse(is.na(good_data$BD[i]), 1.5, good_data$BD[i])
+    
+    # Calculate the new value using the formula
+    new_value <- good_data$SM_value[i] / (1 - bd_value / pd_value)
+    
+    # Replace the existing value in SM_value
+    good_data$SM_value[i] <- new_value
+  }
+}
+
 #still some conversions to do
-
-good_data %>%
-  group_by(Manipulation_V2) %>%
-  mutate(count = length(Study_number)) %>%
-  select(Manipulation_V2, count) %>%
-  unique(.) %>%
-  arrange(desc(count)) -> manipulation_counts
-
-#"Fertilization + Precipitation as well as Precipitation + Fertilization
 
 #filter out units that we aren't going to use at this time
 
@@ -43,8 +57,10 @@ good_data %>%
          CH4_flux_unit_V2, SD_CH4_annual, SD_CH4_growingseason,
          SD_CH4_monthly) -> for_transformation
 
-#current csv has zeros for Study # 23035 where NA's should be in Season_converted
-for_transformation[for_transformation$Study_number == "23035",]$Season_converted <- NA
+
+
+
+
 
 for_transformation %>%
   filter(! is.na(CH4_annual)) %>%
@@ -94,8 +110,7 @@ annual %>%
          flux_sd = flux_sd*cf) %>%
   select(-c(`CH4-C_converted`, Season_converted)) -> combined
 
-combined %>%
-  filter(complete.cases(.)) -> tidy_data
+combined -> tidy_data
 
 tidy_data %>%
   select(CH4_flux_unit_V2) %>%
@@ -114,15 +129,19 @@ tidy_data %>%
 
 #put all fluxes and their error in mg CH4 per meter squared per hour
 tidy_data %>%
-  mutate(stnd_flux = ud.convert(converted, CH4_flux_unit_V2, "mg/m2/h"),
-         stnd_flux_sd = ud.convert(flux_sd, CH4_flux_unit_V2, "mg/m2/h")) %>%
+  mutate(stnd_flux = ud.convert(converted, CH4_flux_unit_V2, "mg/m2/d"),
+         stnd_flux_sd = ud.convert(flux_sd, CH4_flux_unit_V2, "mg/m2/d")) %>%
   select(-c(flux, flux_sd, CH4_flux_unit, CH4_flux_unit_V2,
             converted, cf))-> tidy_standard_unit_data
 
-current_data %>%
-  select(Study_number, RN, Study_midyear, Ecosystem_type,
-         Manipulation_V2, Manipulation_level, Latitude,
-         Longitude, Elevation, Soil_type, Soil_drainage,
-         SM_value, SM_sd, SM_depth, SM_unit,
-         `same timescale as flux? (T/F)`, `if False, timescale`) %>%
+good_data %>%
+  select(Study_number, RN, Study_midyear, Ecosystem_type, Latitude,
+         Longitude, Elevation,
+         SM_value, SM_sd, SM_depth) %>%
   right_join(tidy_standard_unit_data) -> final_data
+final_data$Ecosystem_numeric <- as.numeric(as_factor(final_data$Ecosystem_type))
+final_data$Period_numeric <- as.numeric(as_factor(final_data$period))
+
+final_data <- final_data %>% select(-SM_sd , -SM_depth,-N, -Longitude, -Study_midyear, -RN, -stnd_flux_sd, -Ecosystem_type, -period)
+write.csv(final_data, "final_data.csv", row.names = FALSE)
+
