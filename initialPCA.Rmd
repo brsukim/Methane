@@ -13,9 +13,9 @@ library(tidyr)
 
 ```
 
-## What is the Methane dataset?
+## What is the Methane Dataset?
 
-A dataset of 70+ existing research papers that contain available soil methane (CH4) flux data
+A data set of 70+ existing research papers that contain available soil methane (CH4) flux data
 
 ```{r dataset, echo=FALSE}
 
@@ -23,7 +23,7 @@ A dataset of 70+ existing research papers that contain available soil methane (C
 system("DataDigester.R")
 MethaneData <- read.csv("final_data.csv")
 MethaneData <- MethaneData[complete.cases(MethaneData$SM_value), ]
-MethaneData <- MethaneData %>% select(-Elevation, -Study_number, -Ecosystem_numeric, -Period_numeric)
+MethaneData <- MethaneData %>% select(-Elevation, -Study_number, -Period_numeric)
 
 
 #view first six rows of data
@@ -34,7 +34,8 @@ Latitude, Soil Moisture, Standardized CH4 Flux, Ecosystem type, and Measurement 
 
 ### Linear Regression
 
-Doing a simple linear regression of CH4 soil flux and soil moisture data, we can see a 2-variable comparison of the most obvious sources of variance. However, we know that there is a multitude of factors that contribute to soil methane flux. For this reason, we need a PCA to be able to understand which factors contribute to this variance and to what degree. 
+Doing a simple linear regression of CH4 soil flux and soil moisture data, we can see a 2-variable comparison of the most obvious sources of variance. However, we know that there is a multitude of factors that contribute to soil methane flux. For this reason, we need a PCA to be able to understand which factors contribute to this variance and to what degree.
+
 ```{r linreg}
 model <- lm(stnd_flux ~ SM_value, data = MethaneData)
 summary(model)
@@ -59,7 +60,7 @@ results <- prcomp(MethaneData, scale = TRUE)
 
 Specifying that `scale = TRUE` is critical as it ensures that the variables are correctly scaled on a normal distribution
 
-Because we are using categorical variables in this PCA (ecosystem type and measurement period), we convert them into numerical values. It is important to note that because these variables are not continuous, the results of the PCA may be skewed. 
+Because we are using categorical variables in this PCA (ecosystem type and measurement period), we convert them into numerical values. It is important to note that because these variables are not continuous, the results of the PCA may be skewed.
 
 ```{r display_eigenvalues}
 #reverse the signs
@@ -71,7 +72,7 @@ results$rotation
 
 The above code first flips the values of the eigenvalues with `-1*results$rotation` so that the principal components can be better interpreted.
 
-The output, known as a eigenvalue matrix, shows the correlation between the original variables and the Principal Components. 
+The output, known as a eigenvalue matrix, shows the correlation between the original variables and the Principal Components.
 
 ```{r show_scores, echo= FALSE}
 #reverse the signs of the scores
@@ -90,8 +91,7 @@ After reversing the eigenvalues back to their original value, `results$x` gives 
 biplot(results, scale = 0) 
 ```
 
-We see that states that are close to each other will have similar data patterns with one another. 
-Furthermore, the proximity of an observed point's (a state's) a variable vector is proportional to their association. 
+We see that states that are close to each other will have similar data patterns with one another. Furthermore, the proximity of an observed point's (a state's) a variable vector is proportional to their association.
 
 ## Scree Plot
 
@@ -102,7 +102,7 @@ We finish this by creating a scree plot, which is a graphic that visualizes the 
 var_explained = results$sdev^2 / sum(results$sdev^2)
 
 # Create a scree plot
-plot(c(1:3), var_explained, type = "b",
+plot(c(1:4), var_explained, type = "b",
      xlab = "Principal Component",
      ylab = "Variance Explained",
      main = "Scree Plot",
@@ -114,7 +114,6 @@ plot(c(1:3), var_explained, type = "b",
 ```{r summary}
 summary(results)
 ```
-
 
 ## References
 
