@@ -126,13 +126,20 @@ tidy_data %>%
 # 8 CH4 μmol/mol  #this is the only unit that we can't convert  
 # 9 kg/hm2/yr       
 # 10 μg/m2/s 
+# Unit Conversion with Filtering
 
-#put all fluxes and their error in mg CH4 per meter squared per hour
+# Filter out rows where the original unit is not convertible
+convertible_units <- c("mg/m2/h", "kg/ha/yr", "μg/m2/h", "mg/m2/d", 
+                       "mg/m2/yr", "g/m2/yr", "g/ha/d", "μg/m2/s")
+
 tidy_data %>%
+  filter(CH4_flux_unit_V2 %in% convertible_units) %>%  # Only keep rows with convertible units
   mutate(stnd_flux = ud.convert(converted, CH4_flux_unit_V2, "mg/m2/d"),
          stnd_flux_sd = ud.convert(flux_sd, CH4_flux_unit_V2, "mg/m2/d")) %>%
   select(-c(flux, flux_sd, CH4_flux_unit, CH4_flux_unit_V2,
-            converted, cf))-> tidy_standard_unit_data
+            converted, cf)) -> tidy_standard_unit_data
+
+#put all fluxes and their error in mg CH4 per meter squared per hour
 
 good_data %>%
   select(Study_number, RN, Study_midyear, Ecosystem_type, Latitude,

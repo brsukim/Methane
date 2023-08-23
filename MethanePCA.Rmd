@@ -1,0 +1,164 @@
+---
+title: Initial Principal Component Analysis of Methane Data
+author: Brandon Kim
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  html_document: default
+  word_document: default
+---
+
+```{r setup, include= FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+```
+
+## What is the Methane Dataset?
+
+A data set of 70+ existing research papers that contain available soil methane (CH4) flux data
+
+```{r loadingdataset, child= 'DataDigester.R', echo=FALSE, results='hide', message=FALSE}
+
+
+```
+
+```{r dataset, echo=FALSE}
+
+#load data
+MethaneData <- read.csv("final_data.csv")
+MethaneData <- MethaneData[complete.cases(MethaneData$SM_value), ]
+
+
+#view first six rows of data
+head(MethaneData)
+```
+
+Latitude, Soil Moisture, Standardized CH4 Flux, and Ecosystem type will be assessed in this PCA.
+
+### Linear Regression
+
+Doing a simple linear regression of CH4 soil flux and soil moisture data, we can see a 2-variable comparison of the most obvious sources of variance. However, we know that there is a multitude of factors that contribute to soil methane flux. For this reason, we need a PCA to be able to understand which factors contribute to this variance and to what degree.
+
+```{r linreg, echo=FALSE}
+model <- lm(stnd_flux ~ SM_value, data = MethaneData)
+summary(model)
+ggplot(MethaneData, aes(x = SM_value, y = stnd_flux)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(x = "WFPS%", y = "Standardized Flux (mg CH4 / m2/ d)", title = "Linear Regression of Soil Moisture on CH4 flux")
+
+```
+
+### PRComp
+
+We use the function `prcomp()` to calculate the principal components of the dataset. The function works by centering and scaling the each variable to a normal distribution (mean = 0, sd = 1). A covariance matrix is created with all of the variables (race, murders, etc.), showing how variables are related to one another (strength and direction).
+
+Then R does some stuff with eigenvalues that I still can't really wrap my head around. Eigenvalues are a measure of how much a vector is stretched in a transformation and I guess we are able to calculate that in a PCA from the covariance matrix. These form the principal components, with amount of variance being put in ascending order.
+
+```{r prcomp}
+
+#calculate principal components
+
+# remove period_numeric, study number, and elevation from this pca as they are not relevant to this analysis
+MethaneDataNoPeriod <- MethaneData %>% select(-Elevation, -Study_number, -Period_numeric)
+
+# Store pca analysis into "results"
+results <- prcomp(MethaneDataNoPeriod, scale = TRUE)
+```
+
+Specifying that `scale = TRUE` is critical as it ensures that the variables are correctly scaled on a normal distribution
+
+Because we are using categorical variables in this PCA (ecosystem type and measurement period), we convert them into numerical values. It is important to note that because these variables are not continuous, the results of the PCA may be skewed.
+
+```{r display_eigenvalues}
+#reverse the signs
+results$rotation <- -1*results$rotation
+
+#display principal components
+results$rotation
+```
+
+The above code first flips the values of the eigenvalues with `-1*results$rotation` so that the principal components can be better interpreted.
+
+The output, known as a eigenvalue matrix, shows the correlation between the original variables and the Principal Components.
+
+```{r show_scores, echo= FALSE}
+#reverse the signs of the scores
+results$x <- -1*results$x
+
+#display the first six scores
+head(results$x)
+```
+
+## Biplot of PC1 and PC2
+
+After reversing the eigenvalues back to their original value, `results$x` gives the principal component score for each observation for every principal component. To better see this, we can create a biplot that visualizes PC1 and PC2 and where all the states fit spatially on this PC plot.
+
+```{r biplot, echo= FALSE}
+#create biplot to visualize results
+# Assuming you have loaded the required libraries and the loadings matrix
+
+# Create a biplot using the loadings matrix
+biplot(results, cex = 0.7, col = c("red", "blue", "green", "purple"))
+
+# Add labels for each variable
+
+biplot(results, scale = 0) 
+```
+
+We see that states that are close to each other will have similar data patterns with one another. Furthermore, the proximity of an observed point's (a state's) a variable vector is proportional to their association.
+
+We can better see these eigenvectors on this biplot of the two Principal Components and the relative positions of each variable within them. This shows us how much each PCA can be explained by each variable with a visual example.
+
+```{r PCALoadings, echo=FALSE}
+
+# Your PCA loadings data
+loadings <- data.frame(
+  Variable = c("Latitude", "SM_value", "stnd_flux", "Ecosystem_numeric"),
+  PC1 = c(0.3721804, 0.4883879, 0.5323241, 0.5827436),
+  PC2 = c(-0.7637237, 0.5614779, 0.2435658, -0.2052909),
+  PC3 = c(-0.1219573, 0.3550803, -0.7831530, 0.4956973),
+  PC4 = c(-0.5131611, -0.5658072, 0.2097097, 0.6103685)
+)
+
+# Create a scatter plot with zoomed-out axes
+pca_plot_zoomed <- ggplot(loadings, aes(x = PC1, y = PC2, label = Variable)) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray50") +
+  geom_text(hjust = 0, vjust = 0) +
+  labs(title = "PCA Eigenvalue Scatterplot", x = "PC1", y = "PC2") +
+  theme_minimal() +
+  xlim(min(loadings$PC1) - 0.4, max(loadings$PC1) + 0.2) +
+  ylim(min(loadings$PC2) - 0.2, max(loadings$PC2) + 0.2)
+
+# Display the zoomed-out plot
+print(pca_plot_zoomed)
+
+```
+
+## Scree Plot
+
+We finish this by creating a scree plot, which is a graphic that visualizes the amount of variation that each principal component is responsible for. By doing so, we can see which principal components contribute the most to the results of the dataset.
+
+```{r screeplot, echo= FALSE}
+#calculate total variance explained by each principal component
+var_explained = results$sdev^2 / sum(results$sdev^2)
+
+# Create a scree plot
+plot(c(1:4), var_explained, type = "b",
+     xlab = "Principal Component",
+     ylab = "Variance Explained",
+     main = "Scree Plot",
+     ylim = c(0, 1))
+```
+
+## Summary of PC
+
+```{r summary}
+summary(results)
+```
+
+## References
+
+Zach. (2020, December 1). Principal components analysis in R: Step-by-step example. Statology. <https://www.statology.org/principal-components-analysis-in-r/>
